@@ -3,7 +3,9 @@ plugins {
     id 'war'
 }
 
-apply plugin : 'java'
+apply plugin: 'java'
+apply plugin: 'checkstyle'
+
 
 group 'com.aconex'
 version '1.0-SNAPSHOT'
@@ -19,4 +21,8 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.41.0'
+}
+
+task wrapper(type: Wrapper){
+    gradleVersion = '3.4.1'
 }
