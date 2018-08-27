@@ -4,7 +4,9 @@ plugins {
 }
 
 apply plugin: 'java'
-
+apply plugin: 'pmd'
+apply plugin: 'checkstyle'
+apply plugin: 'findbugs'
 
 group 'com.aconex'
 version '1.0-SNAPSHOT'
@@ -24,4 +26,16 @@ dependencies {
 
 task wrapper(type: Wrapper){
     gradleVersion = '3.4.1'
+}
+
+checkstyle {
+    configFile file("${project.rootDir}/config/checkstyle/checkstyle.xml")
+}
+
+pmd {
+    ruleSetFiles = files("${project.rootDir}/config/pmd/pmd.xml")
+}
+
+findbugs {
+    includeFilter = file("${project.rootDir}/config/findbugs/findbugs.xml")
 }
