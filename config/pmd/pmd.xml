@@ -210,9 +210,9 @@
         <priority>3</priority>
     </rule>
 
-    <rule ref="rulesets/java/unnecessary.xml/UnnecessaryModifier">
-        <priority>5</priority>
-    </rule>
+    <!--<rule ref="rulesets/java/unnecessary.xml/UnnecessaryModifier">-->
+        <!--<priority>5</priority>-->
+    <!--</rule>-->
 
     <rule ref="rulesets/java/logging-jakarta-commons.xml/UseCorrectExceptionLogging">
         <priority>3</priority>
