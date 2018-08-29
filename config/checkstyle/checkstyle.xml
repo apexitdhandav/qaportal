@@ -137,4 +137,8 @@
         <property name="checkFormat" value="$1"/>
     </module>
     <module name=" SuppressWithNearbyCommentFilter"/>
+
+    <module name="SuppressionFilter">
+        <property name="file" value="${suppressionFile}"></property>
+    </module>
 </module>
