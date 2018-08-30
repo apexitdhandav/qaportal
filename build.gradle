@@ -19,6 +19,10 @@ apply plugin: 'checkstyle'
 apply plugin: 'findbugs'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'application'
+
+
+mainClassName = 'com.aconex.qaportal.QAApplication'
 
 group 'com.aconex'
 version '1.0-SNAPSHOT'
