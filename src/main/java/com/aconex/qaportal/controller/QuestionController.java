@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class QuestionController {
 
@@ -17,6 +19,11 @@ public class QuestionController {
     @RequestMapping(value = "/questions", method = RequestMethod.POST)
     public void addQuestion(@RequestBody Question question){
         questionService.addQuestion(question);
+    }
+
+    @RequestMapping(value = "/questions", method = RequestMethod.GET)
+    public List<Question> viewAllQuestion() {
+        return questionService.viewAllQuestion();
     }
 
 }

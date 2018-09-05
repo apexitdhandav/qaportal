@@ -5,6 +5,10 @@ import com.aconex.qaportal.repositories.QuestionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class QuestionService {
 
@@ -13,6 +17,15 @@ public class QuestionService {
 
     public void addQuestion(Question question){
         questionRepository.save(question);
+    }
+
+    public List<Question> viewAllQuestion() {
+        Iterable<Question> results = questionRepository.findAll();
+        List<Question> questions = new ArrayList<>();
+        for(Question ques : results){
+            questions.add(ques);
+        }
+        return questions;
     }
 
 }

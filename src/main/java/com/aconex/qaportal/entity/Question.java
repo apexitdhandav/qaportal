@@ -6,6 +6,7 @@ import javax.persistence.*;
 public class Question {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String question;
 
