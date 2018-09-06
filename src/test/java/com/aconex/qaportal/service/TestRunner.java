@@ -1,4 +1,4 @@
-package com.aconex.qaportal.service;
+/*package com.aconex.qaportal.service;
 
 
 import org.junit.Test;
@@ -13,3 +13,4 @@ public class TestRunner {
     public void contextLoads(){}
 
 }
+*/
