@@ -46,17 +46,7 @@ public class QuestionServiceTest{
         assertEquals(mockdata,questionService.viewAllQuestion());
     }
 
-   /* @Test
-    public void test_addQuestion(){
-        List<Question> mockdata= new ArrayList<Question> ();
-        Question temp_question = new Question(  1, "Dummy Question 1");
-        Mockito.when(mockRepository.save(temp_question)).add(mockdata.add(temp_question));
-        Mockito.doReturn(mockdata).when(mockRepository).save()
 
-
-
-        questionRepository.save(question);
-    }*/
 
 
 
