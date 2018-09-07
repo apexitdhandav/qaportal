@@ -26,6 +26,8 @@ public class QuestionServiceTest{
     @Autowired
     private QuestionService questionService;
 
+
+
     @Test
     public void testViewAllQuestionSingle(){
 
@@ -41,10 +43,17 @@ public class QuestionServiceTest{
         List<Question> mockdata= new ArrayList<Question> ();
         mockdata.add(new Question(  1, "Dummy Question 1"));
         mockdata.add(new Question(  2, "Dummy Question 2"));
+        mockdata.add(new Question(  3, "Dummy Question 3"));
+        mockdata.add(new Question(  4, "Dummy Question 4"));
 
         Mockito.doReturn(mockdata).when(mockRepository).findAll();
         assertEquals(mockdata,questionService.viewAllQuestion());
     }
+
+
+
+
+
 
    /* @Test
     public void test_addQuestion(){
