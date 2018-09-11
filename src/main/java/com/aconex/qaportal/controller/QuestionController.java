@@ -15,6 +15,15 @@ public class QuestionController {
 
     @Autowired
     private QuestionService questionService;
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurerAdapter() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/*").allowedOrigins("*");
+            }
+        };
+    }
 
     @RequestMapping(value = "/questions", method = RequestMethod.POST)
     public void addQuestion(@RequestBody Question question){
