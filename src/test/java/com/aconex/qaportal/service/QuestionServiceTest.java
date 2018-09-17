@@ -46,8 +46,4 @@ public class QuestionServiceTest{
         assertEquals(mockdata,questionService.viewAllQuestion());
     }
 
-
-
-
-
 }
